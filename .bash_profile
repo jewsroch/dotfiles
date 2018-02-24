@@ -1,5 +1,17 @@
+# Up Memcached uLimit for I-Tier
+ulimit -n 4096
+
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+
+# Add Yarn CLI
+export PATH="$(yarn global bin):$PATH"
+
+# Add PHP
+export PATH=/usr/local/php5/bin:$PATH
+
+# Add Groupon Booking Frontend Tools
+# export PATH=/Users/cjewsbury/repos/booking/frontend-tools/scripts:$PATH
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -17,6 +29,9 @@ shopt -s histappend;
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
+
+# Don't check mail when opening terminal.
+unset MAILCHECK
 
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
@@ -45,4 +60,6 @@ fi;
 complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
-complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Chrome" killall;
+
+export PATH=/usr/local/bin:$PATH
