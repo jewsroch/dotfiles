@@ -8,10 +8,11 @@ export PATH="$HOME/bin:$PATH";
 export PATH="$(yarn global bin):$PATH"
 
 # Add PHP
-export PATH=/usr/local/php5/bin:$PATH
+# export PATH=/usr/local/php5/bin:$PATH
 
-# Add Groupon Booking Frontend Tools
-# export PATH=/Users/cjewsbury/repos/booking/frontend-tools/scripts:$PATH
+# # Add NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
