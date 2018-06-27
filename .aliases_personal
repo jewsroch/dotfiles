@@ -44,8 +44,9 @@ alias pgh="open https://github.com/jewsroch/ -a Google\ Chrome.app"
 
 
 # ==== Work Aliases ====
-alias merchant-setup="cd ~/repos/booking/merchant-setup"
-alias review-board-package-recipes="rbt post --repository ops-package-recipes"
+alias nombom="rm -rf node_modules/ bower_components/ tmp/ dist/ && yarn install --pure-lockfile && bower cache clean && bower install"
+# alias merchant-setup="cd ~/repos/booking/merchant-setup"
+# alias review-board-package-recipes="rbt post --repository ops-package-recipes"
 
 # ==== Booking Aliases =====
 alias test-arse-merchant-setup-integration="DEBUG=test-integration ./env.sh mocha test/integration/setup_arse.test.coffee"
