@@ -89,6 +89,8 @@
 	whitespace = fix
 
 [core]
+	# Set editor to sublime
+	editor = "subl -n -w"
 
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
@@ -174,7 +176,7 @@
 [push]
 
 	# https://git-scm.com/docs/git-config#git-config-pushdefault
-	default = simple
+	default = upstream
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
