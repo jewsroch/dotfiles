@@ -89,6 +89,8 @@
 	whitespace = fix
 
 [core]
+	# Set editor to sublime
+	editor = "subl -n -w"
 
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
