@@ -102,6 +102,10 @@ alias git-clean='git branch --merged master | grep -v "\* master" | xargs -n 1 g
 alias gls="git log --pretty=format:'%h%x09%ad%x09%s%x09' --date=short"
 alias ga="git add -p"
 
+# ==== Ember Aliases ====
+alias ebw="ember build -w"
+alias et="ember test"
+
 # From Bash-it
 alias gcl='git clone'
 alias gf='git fetch --all --prune'
