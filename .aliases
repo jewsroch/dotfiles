@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-source .aliases_personal
-
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
