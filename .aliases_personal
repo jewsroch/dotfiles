@@ -97,8 +97,9 @@ alias makedebug="pgrep node | xargs kill -9 && NODE_ENV=development devtool core
 alias gpu="git push -u origin HEAD"
 alias gpf="git push --force"
 alias gpp="git pull && git push && git push --tags"
+alias gclean='git gc --prune=now && git remote prune origin'
 # delete all merged branches
-alias git-clean='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
+# alias git-clean='git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d'
 alias gls="git log --pretty=format:'%h%x09%ad%x09%s%x09' --date=short"
 alias ga="git add -p"
 

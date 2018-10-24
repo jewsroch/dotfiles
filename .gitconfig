@@ -33,6 +33,17 @@
 	branches = branch -a
 	remotes = remote -v
 
+	# Get the current branch name (not so useful in itself, but used in
+	# other aliases)
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+
+	# Push the current branch to the remote "origin", and set it to track
+	# the upstream branch
+	publish = "!git push -u origin $(git branch-name)"
+
+	# Delete the remote version of the current branch
+	unpublish = "!git push origin :$(git branch-name)"
+
 	# List aliases
 	aliases = config --get-regexp alias
 
@@ -176,7 +187,7 @@
 [push]
 
 	# https://git-scm.com/docs/git-config#git-config-pushdefault
-	default = upstream
+	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
