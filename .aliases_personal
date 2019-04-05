@@ -48,6 +48,12 @@ alias nombom="rm -rf node_modules/ bower_components/ tmp/ dist/ && yarn install 
 # alias merchant-setup="cd ~/repos/booking/merchant-setup"
 # alias review-board-package-recipes="rbt post --repository ops-package-recipes"
 
+alias es="gh es"
+alias pardot="gh pardot"
+alias rsf="rake workflow:stats_api:start_forward"
+alias wfs-start-forward="rake workflow:stats_api:start_forward"
+alias wfs-stop-forward="rake workflow:stats_api:stop_forward"
+
 # ==== Booking Aliases =====
 alias test-arse-merchant-setup-integration="DEBUG=test-integration ./env.sh mocha test/integration/setup_arse.test.coffee"
 alias test-g3-merchant-setup-integration="DEBUG=test-integration ./env.sh mocha test/integration/setup_g3.test.coffee"

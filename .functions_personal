@@ -50,6 +50,12 @@ jira() {
   open "https:://jira.groupondev.com/browse/$1" -a Google\ Chrome.app
 }
 
+gus() {
+  branch=$(git name-rev --name-only HEAD 2>/dev/null)
+  branch=$(echo $branch | cut -d'/' -f 2)
+  open "https://gus.lightning.force.com/apex/ADM_WorkLocator?bugorworknumber=$branch" -a Google\ Chrome.app
+}
+
 objira() {
   open "https:://jira.groupondev.com/browse/OBOOK-$1" -a Google\ Chrome.app
 }
@@ -114,7 +120,7 @@ function gh() {
 		 return
   fi
 
-  giturl=${giturl/git\@github\.groupondev\.com\:/https://github.groupondev.com/}
+  giturl=${giturl/git\@git\.dev\.pardot\.com\:/https://git.dev.pardot.com/}
   branch="$(git symbolic-ref HEAD 2>/dev/null)" ||
   branch="(unnamed branch)"     # detached HEAD
   branch=${branch##refs/heads/}
@@ -186,11 +192,11 @@ function gh() {
   elif [ "$1" = "n" ]; then ## w => network
     giturl=${giturl/\.git/\/network}
     open $giturl
-  elif [ "$1" = "book" ]; then ## w => network
-    giturl="https://github.groupondev.com/BookingEngine/"
+  elif [ "$1" = "es" ]; then ## w => network
+    giturl="https://git.dev.pardot.com/Pardot/engagement-studio/pulls"
     open $giturl
-  elif [ "$1" = "commeng" ]; then ## w => network
-    giturl="https://github.groupondev.com/comm-eng/"
+  elif [ "$1" = "pardot" ]; then ## w => network
+    giturl="https://git.dev.pardot.com/Pardot/pardot/pulls/chad-jewsbury"
     open $giturl
   elif [ "$1" = "me" ]; then ## w => network
     giturl="https://github.com/jewsroch/"
